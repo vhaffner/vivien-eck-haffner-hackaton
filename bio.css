@@ -1,0 +1,15 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  font-family: "Avenir";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}/*# sourceMappingURL=bio.css.map */
