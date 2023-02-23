@@ -1,0 +1,49 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.nav {
+  position: sticky;
+  &__section {
+    display: flex;
+    justify-content: space-between;
+    @include margin;
+  }
+
+  &__left {
+    margin-top: 1.6rem;
+  }
+
+  &__bar {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  &__items {
+    padding: 0.5rem;
+    list-style-type: none;
+
+    @include tablet {
+      padding: 1.2rem 1.5rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: black;
+  }
+
+  &__logo {
+    text-decoration: none;
+    padding: 0.5rem;
+    color: black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-weight: 700;
+
+    @include tablet {
+      font-size: 2.4rem;
+    }
+  }
+}

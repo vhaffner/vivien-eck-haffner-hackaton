@@ -1,0 +1,34 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+footer {
+  background-color: $background-color;
+  padding: 1.6rem;
+}
+
+.footer {
+  &__title,
+  &__line {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  &__email {
+    text-decoration: none;
+    color: white;
+  }
+
+  &__logo {
+    padding: 0 1rem;
+  }
+
+  &__outer {
+    @include margin;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

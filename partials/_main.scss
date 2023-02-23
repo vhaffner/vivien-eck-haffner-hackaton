@@ -1,0 +1,78 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.main {
+  @include margin;
+
+  @include tablet {
+    display: flex;
+  }
+
+  &__section {
+    @include tablet {
+      padding: 0 2rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    @include button;
+  }
+}
+
+.joke {
+  @include tablet {
+    padding: 0 2rem;
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn {
+    @include button;
+  }
+
+  &__join {
+    padding: 2rem;
+
+    @include tablet {
+      padding-top: 0;
+    }
+  }
+
+  &__outer {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000a1;
+    height: 100%;
+
+    &--show {
+      visibility: visible;
+    }
+  }
+
+  &__popup {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__reward {
+    @include button;
+  }
+}

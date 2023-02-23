@@ -1,10 +1,10 @@
 const mainJokesContainer = document.querySelector(".main__joke");
+const jokeField = document.querySelector(".main__random");
 
 const getRandomJoke = () => {
   axios
     .get("https://api.chucknorris.io/jokes/random")
     .then((response) => {
-      // renderJokes(response.data);
       renderRandomJoke(response.data);
     })
     .catch((error) => {
@@ -21,7 +21,6 @@ const newJoke = (joke) => {
   randomJoke.classList.add("main__random");
 
   newJokeContainer.appendChild(randomJoke);
-  // mainJokesSite.appendChild(newJokeContainer);
   return newJokeContainer;
 };
 
@@ -43,5 +42,28 @@ const pressButton = document.querySelector(".main__button");
 
 pressButton.addEventListener("click", (event) => {
   event.preventDefault();
+  //   jokeField.innerText = " ";
   getRandomJoke();
+});
+
+const popUp = document.querySelector(".joke__outer");
+
+const popUpPicture = () => {
+  popUp.classList.add("joke__outer--show");
+};
+
+const submitButton = document.querySelector(".joke__btn");
+const newChuckFact = document.getElementById("new__joke");
+
+submitButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  newChuckFact.innerText = " ";
+  popUpPicture();
+});
+
+const closeButton = document.querySelector(".joke__reward");
+
+closeButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  popUp.classList.remove("joke__outer--show");
 });

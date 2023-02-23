@@ -16,7 +16,7 @@
     <nav class="nav">
       <section class="nav__section">
         <div class="nav__left">
-          <p class="nav__logo">ChuckJokes</p>
+          <a class="nav__logo" href="./index.html">ChuckFacts</a>
         </div>
         <div class="nav__right">
           <ul class="nav__bar">
@@ -33,11 +33,12 @@
         </div>
       </section>
     </nav>
-    <main>
+    <hero class="hero__picture"> </hero>
+    <main class="main">
       <section class="main__section">
         <div class="main__container">
           <h1 class="main__title">
-            Do you want to hear a good Chuck Norris joke?
+            Do you want to hear a fun Chuck Norris fact?
           </h1>
         </div>
         <div class="main__wrapper">
@@ -49,46 +50,79 @@
             sophistication, and masculinity.
           </p>
         </div>
-        <button class="main__button" type="submit">Get a Chuck joke!</button>
+        <div class="main__submit">
+          <button class="main__button" type="submit">Get a Chuck Fact!</button>
+        </div>
         <div class="main__joke"></div>
+      </section>
+      <section class="joke">
+        <div class="joke__join">
+          <h2 class="joke__title">Join the Conversation</h2>
+          <form class="joke__form">
+            <div class="joke__wrapper">
+              <label class="joke__label" for="joke"
+                >If you have a good Chuck Norris joke/fact, share it with
+                us:</label
+              >
+              <textarea
+                rows="6"
+                type="comment"
+                id="new__joke"
+                name="joke"
+                placeholder="Send us a new Fact"
+              ></textarea>
+              <div class="joke__submit">
+                <button class="joke__btn" type="submit">Submit</button>
+              </div>
+              <div class="joke__outer">
+                <div class="joke__popup">
+                  <img src="./images/chuckiemon.jpg" alt="chuch pokemon card" />
+                  <div class="joke__close">
+                    <button class="joke__reward" type="submit">
+                      Collect your reward
+                    </button>
+
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
     <footer>
-      <section class="footer__left">
-        <div class="footer__main">
-          <h2 class="footer__title">You can find us on:</h2>
-          <div class="footer__icons">
-            <a href="https://www.instagram.com/" target="_blank"
-              ><img
-                class="footer__logo"
-                src="./images/Icon-instagram.svg"
-                alt="instagram"
-            /></a>
-            <a href="https://www.facebook.com/" target="_blank"
-              ><img
-                class="footer__logo"
-                src="./images/Icon-facebook.svg"
-                alt="facebook"
-            /></a>
-            <a href="https://www.twitter.com/" target="_blank"
-              ><img
-                class="footer__logo"
-                src="./images/Icon-twitter.svg"
-                alt="twitter"
-            /></a>
+      <div class="footer__outer">
+        <section class="footer__left">
+          <div class="footer__main">
+            <h2 class="footer__title">You can find us on:</h2>
+            <div class="footer__icons">
+              <a href="https://www.instagram.com/" target="_blank"
+                ><img
+                  class="footer__logo"
+                  src="./images/Icon-instagram.svg"
+                  alt="instagram"
+              /></a>
+              <a href="https://www.facebook.com/" target="_blank"
+                ><img
+                  class="footer__logo"
+                  src="./images/Icon-facebook.svg"
+                  alt="facebook"
+              /></a>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="footer__right">
-        <div class="footer__container">
-          <h2 class="footer__line">Contact us:</h2>
-        </div>
-        <div class="footer__address">
-          <a class="footer__email" href="mailto:chuck.norris@chuckisthebest.com"
-            >chuck.norris@chuckisthebest.com</a
-          >
-        </div>
-      </section>
+        </section>
+        <section class="footer__right">
+          <div class="footer__container">
+            <h2 class="footer__line">Contact us:</h2>
+          </div>
+          <div class="footer__address">
+            <a
+              class="footer__email"
+              href="mailto:chuck.norris@chuckisthebest.com"
+              >chuck.norris@chuckisthebest.com</a
+            >
+          </div>
+        </section>
+      </div>
     </footer>
   </body>
 </html>

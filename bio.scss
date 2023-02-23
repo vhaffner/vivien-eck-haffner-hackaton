@@ -1,3 +1,7 @@
 @use "./partials/mixins" as *;
 @use "./partials/resets" as *;
 @use "./partials/variables" as *;
+@use "./partials/nav";
+@use "./partials/main";
+@use "./partials/hero";
+@use "./partials/footer";
