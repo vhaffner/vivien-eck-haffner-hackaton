@@ -27,7 +27,7 @@ const newJoke = (joke) => {
 const renderRandomJoke = (joke) => {
   const showMyJokes = newJoke(joke);
 
-  mainJokesContainer.appendChild(showMyJokes);
+  mainJokesContainer.replaceChildren(showMyJokes);
 };
 
 const renderJokes = (response) => {
@@ -42,7 +42,7 @@ const pressButton = document.querySelector(".main__button");
 
 pressButton.addEventListener("click", (event) => {
   event.preventDefault();
-  //   jokeField.innerText = " ";
+  //   jokeField. = " ";
   getRandomJoke();
 });
 
@@ -57,7 +57,7 @@ const newChuckFact = document.getElementById("new__joke");
 
 submitButton.addEventListener("click", (event) => {
   event.preventDefault();
-  newChuckFact.innerText = " ";
+  newChuckFact.value = "";
   popUpPicture();
 });
 
